@@ -1,9 +1,9 @@
 import { motion } from 'motion/react';
 import { TiltCard } from './TiltCard';
-import coforgeLogoImg from 'figma:asset/e9064d77de4ceaa6eb31185d7d1d95d1e1eaf0c5.png';
-import gidaLogoImg from 'figma:asset/a90e59dd5cd21e1839efa526b88044b4d7fddcb1.png';
-import bmsceLogoImg from 'figma:asset/ced4df5a1bd0605e49f7afa8a1ad5cce22004ac3.png';
-import iiitbLogoImg from 'figma:asset/eece2f860d8266444334becbf7b9252a2858bcec.png';
+import coforgeLogoImg from '../../assets/coforgeLogo.jpeg';
+import gidaLogoImg from '../../assets/gidaLogo.jpeg';
+import bmsceLogoImg from '../../assets/BMSlogo.jpeg';
+import iiitbLogoImg from '../../assets/IIITlogo.jpeg';
 
 const FONT_SERIF = '"Playfair Display", Georgia, serif';
 const FONT_MONO = '"DM Mono", monospace';
