@@ -5,6 +5,7 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Cursor } from "./components/Cursor";
 import { useIsMobile } from "../hooks/useMediaQuery";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const isMobile = useIsMobile();
@@ -40,6 +41,7 @@ export default function App() {
         <Projects />
         <Contact />
       </div>
+      <Analytics />
     </div>
   );
 }
