@@ -35,7 +35,7 @@ const timeline = [
     year: "2025–2027",
     role: "Executive Diploma",
     company: "IIIT Bangalore",
-    detail: "MLOps & Generative AI",
+    detail: "Dual specialisation - MLOps, GenAI",
     logo: iiitbLogoImg,
     logoH: 55,
   },
@@ -51,16 +51,16 @@ const timeline = [
 
 const pillars = [
   {
-    title: "LLM Infrastructure",
-    desc: "Real-time SIP-to-LLM pipelines, distributed inference at scale, cost reduction, SLA-aware monitoring.",
+    title: "Inference Infrastructure",
+    desc: "SIP-to-LLM pipelines, async concurrency design, distributed inference, infra density optimization, SLA-bound monitoring.",
   },
   {
-    title: "Reasoning & Traceability",
-    desc: "Evidence-first agentic systems, provenance-bound outputs, inspectable failure modes.",
+    title: "Execution & Observability",
+    desc: "Cross-service log correlation, bounded async runtimes, provider-agnostic execution layers, failure isolation, rapid MTTR reduction.",
   },
   {
-    title: "Physics-Aware ML",
-    desc: "Regime identification, CLIP-style alignment, PDE/ODE-constrained learning, symbolic structure.",
+    title: "Structured Reasoning Systems",
+    desc: "Tree-based retrieval, graph-backed pipelines, provenance-aware workflows, physics-informed representations, deterministic multi-runtime execution.",
   },
 ];
 
@@ -150,10 +150,14 @@ export function About() {
               maxWidth: "500px",
             }}
           >
-            I design AI systems that operate under real-world constraints —
-            computational, regulatory, and epistemic. My work spans distributed
-            LLM infrastructure, graph-based reasoning engines, physics-informed
-            modeling, and local-first RAG systems.
+            I design high-throughput, constraint-aware intelligent systems that
+            operate predictably under real-world constraints — from runtime
+            execution surfaces to structured reasoning pipelines. My work spans
+            distributed inference and retrieval infrastructure, local-first
+            tree-based indexing with reproducible execution, modular
+            orchestrators with traceable evidence flow, and interpretable
+            representation layers that isolate semantic understanding from
+            numerical computation.
           </motion.p>
 
           <motion.p
@@ -170,10 +174,11 @@ export function About() {
               maxWidth: "500px",
             }}
           >
-            But my deeper focus is structural:{" "}
+            My focus is structural:{" "}
             <span style={{ color: "#e8e0d0", fontStyle: "italic" }}>
-              how intelligent systems decide what assumptions they are operating
-              under.
+              defining execution boundaries, observability surfaces, failure
+              domains, and data provenance so complex systems behave predictably
+              at scale and under production load.
             </span>
           </motion.p>
 
@@ -191,9 +196,9 @@ export function About() {
               maxWidth: "500px",
             }}
           >
-            I treat AI as infrastructure — not as a prompt wrapper. That means
-            designing for latency budgets, observability, provenance,
-            reproducibility, and architectural clarity.
+            I treat AI as infrastructure — building for latency budgets,
+            throughput ceilings, transparency, and operational clarity across
+            distributed components.
           </motion.p>
 
           <div

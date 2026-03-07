@@ -71,6 +71,7 @@ export function Hero() {
           height: "1px",
           background: "rgba(255,255,255,0.08)",
           transformOrigin: "left",
+          zIndex: 5,
         }}
       />
 
@@ -88,6 +89,7 @@ export function Hero() {
           letterSpacing: "0.18em",
           color: "rgba(255,255,255,0.5)",
           textTransform: "uppercase",
+          zIndex: 5,
         }}
       >
         Ashwin Gupta — Portfolio 2025
@@ -107,6 +109,7 @@ export function Hero() {
           letterSpacing: "0.18em",
           color: "rgba(255,255,255,0.5)",
           textTransform: "uppercase",
+          zIndex: 5,
         }}
       >
         AI Engineer — Bangalore
@@ -120,6 +123,8 @@ export function Hero() {
           gap: isMobile ? "3rem" : "4vw",
           alignItems: "center",
           paddingTop: isMobile ? "40px" : "60px",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         {/* LEFT — typography */}
@@ -296,12 +301,15 @@ export function Hero() {
               marginBottom: isMobile ? "2rem" : "2.5rem",
             }}
           >
-            3+ years shipping production LLM & distributed ML systems across
-            BFSI — scaled to{" "}
+            Systems-focused AI engineer building high-throughput, fault-tolerant
+            inference infrastructure. Architected concurrency and observability
+            layers enabling{" "}
             <span style={{ color: "#e8e0d0" }}>1,600+ concurrent sessions</span>
-            , cut costs from{" "}
-            <span style={{ color: "#e8e0d0" }}>$118K → $8K/month</span>, reduced
-            post-call docs from 15 min to 2 min.
+            , <span style={{ color: "#e8e0d0" }}>7× capacity expansion</span>,{" "}
+            <span style={{ color: "#e8e0d0" }}>
+              ~$1.3M annual cost reduction
+            </span>
+            , and rapid root-cause isolation under production load.
           </motion.p>
 
           {/* CTA row */}
@@ -430,7 +438,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1.1, ease: [0.76, 0, 0.24, 1] }}
-          style={{ position: "relative" }}
+          style={{
+            position: "relative",
+            width: "90%",
+            margin: isMobile ? "0 auto" : "0 3vw 0 auto",
+          }}
         >
           <div
             ref={layerPhoto}

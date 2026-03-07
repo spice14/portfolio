@@ -10,38 +10,57 @@ const FONT_SANS = '"DM Sans", sans-serif';
 const capabilities = [
   {
     title: "AI Systems Architecture",
-    desc: "Designing production-grade, observable, and scalable intelligent systems under latency, cost, and regulatory constraints.",
-    tags: ["LLM Deployment", "Observability", "SLA Design", "Cost Modeling"],
-  },
-  {
-    title: "Distributed Inference & Real-Time ML",
-    desc: "Concurrency scaling, SLA preservation, cost modeling, low-latency pipelines.",
-    tags: ["vLLM", "Batching", "Concurrency", "Low-latency"],
-  },
-  {
-    title: "Retrieval-Augmented Systems (RAG)",
-    desc: "Index design, chunking strategy, embedding pipelines, HNSW-based vector search, grounding and hallucination mitigation.",
+    desc: "Designing production-grade, observable, and scalable intelligent systems under performance, reliability, and cost constraints.",
     tags: [
-      "FAISS / HNSW",
-      "Chunking",
-      "Embeddings",
-      "Hallucination Mitigation",
+      "latency budgets",
+      "SLA design",
+      "cost modeling",
+      "observability surfaces",
     ],
   },
   {
-    title: "Model Monitoring & Drift Detection",
-    desc: "Metric design (BLEU, ROUGE-L, cosine similarity, METEOR), time-series anomaly detection, governance and rollout safety.",
-    tags: ["BLEU / ROUGE-L", "MACD Anomaly", "METEOR", "Rollout Safety"],
+    title: "Distributed Inference & Real-Time ML",
+    desc: "Concurrency scaling, async execution, resource efficiency, SLA preservation, and throughput guarantees.",
+    tags: [
+      "async runtimes",
+      "batching",
+      "capacity planning",
+      "low-latency pipelines",
+    ],
   },
   {
-    title: "Graph-Based Recommendation Systems",
-    desc: "Weighted directed graphs, hierarchy modeling, heuristic scoring, optimized traversal for real-time inference.",
-    tags: ["Graph ML", "Heuristic Scoring", "Edge Traversal", "sub-50ms"],
+    title: "Retrieval & Indexing Infrastructure",
+    desc: "High-throughput retrieval design, embedding pipelines, index construction, and grounding strategies with deterministic performance.",
+    tags: [
+      "FAISS/HNSW",
+      "chunking strategies",
+      "embedding maintenance",
+      "hallucination bounding",
+    ],
   },
   {
-    title: "Physics-Informed Machine Learning",
-    desc: "PDE/ODE-constrained learning (PINNs), loss balancing, boundary condition modeling, regime-aware representations.",
-    tags: ["PINNs", "PDEs/ODEs", "PHYSCLIP", "Contrastive Learning"],
+    title: "Monitoring, Telemetry & Failure Isolation",
+    desc: "Designing metric spaces, anomaly detection, trace correlation, and rapid root-cause workflows for distributed services.",
+    tags: [
+      "SLA monitoring",
+      "log correlation",
+      "telemetry pipelines",
+      "failure domain isolation",
+    ],
+  },
+  {
+    title: "Graph & Structural Systems",
+    desc: "Directed graph modeling, hierarchy scoring, optimized traversal, and real-time reasoning substrates.",
+    tags: ["graph traversal", "weighted scoring", "sub-50ms inference loops"],
+  },
+  {
+    title: "Physics-Aware / Constraint-Bound Modeling",
+    desc: "Structured representation layers, regime identification, differential system constraints, and interpretability bridges.",
+    tags: [
+      "physics-informed representations",
+      "constraint embedding",
+      "alignment structures",
+    ],
   },
 ];
 

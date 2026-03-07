@@ -66,12 +66,12 @@ const projects = [
     impact:
       "Architectural fork — OpenAI-assumed → provider-agnostic local-first inference",
     bullets: [
-      "Architectural fork of PageIndex — decouples runtime from OpenAI-specific assumptions toward local-first execution using Ollama",
-      "Replaced OpenAI-branded API wrappers with provider-routed interfaces; centralized provider branching logic",
-      "Introduced finish-reason normalization to standardize continuation semantics across providers",
-      "Added prompt governance system with registry-driven loader architecture",
-      "Bounded async concurrency with semaphore limits; adaptive chunking with hierarchical fallbacks",
-      "Expanded e2e/integration test coverage — reduces regression risk from provider variability",
+      "Architectural fork of PageIndex — decouples inference runtime from OpenAI-specific bindings toward provider-agnostic and local-first execution using Ollama",
+      "Replaced hardcoded OpenAI API calls with provider-routed interfaces; centralized branching logic for runtime flexibility",
+      "Normalized response/finish semantics to unify continuation behavior across model providers",
+      "Added registry-driven prompt governance system with loader abstraction for managed prompt artifacts",
+      "Bounded async concurrency with semaphore limits; adaptive chunking with hierarchical fallbacks for throughput stability",
+      "Expanded end-to-end and integration test coverage to harden provider variability and regression risk",
     ],
     github: "https://github.com/spice14/PageIndexOllama",
   },
@@ -84,13 +84,14 @@ const projects = [
     status: "Completed",
     devStatus: "completed",
     tags: ["RAG", "HNSW", "Ollama", "Privacy-First", "Local LLM", "PyMuPDF"],
-    impact: "Zero external API dependency · air-gapped deployments",
+    impact:
+      "No external APIs · Air-gapped deployments · Deterministic index artifacts",
     bullets: [
-      "Fully local RAG system — ingests PDFs, URLs, or directories with no external APIs or cloud dependency",
-      "Builds HNSW vector indexes using sentence-transformers (facebook/contriever) for fast similarity search",
-      "Grounded Q&A through a Streamlit interface powered by Ollama-hosted LLMs — all on-device",
-      "Supports low-VRAM GPUs via quantized models and CPU-only execution",
-      "Privacy by design — all documents, embeddings, and model inference remain fully local",
+      "Fully local research RAG system — ingests PDFs, URLs, or directories and builds reproducible vector indexes with zero cloud dependency",
+      "Constructs HNSW-based dense vector indexes (LEANN) using sentence-transformers (facebook/contriever) for efficient similarity search and pruning",
+      "Grounded Q&A via Streamlit interface backed by Ollama-hosted quantized LLMs — configurable chunking, Top-K retrieval, and context windows",
+      "Supports CPU-only execution and low-VRAM GPUs through quantized models and optimized embedding pipelines",
+      "Privacy-first architecture — all documents, embeddings, and inference remain fully local",
     ],
     github: "https://github.com/spice14/research-it",
   },
@@ -103,19 +104,20 @@ const projects = [
     status: "In Progress",
     devStatus: "in-progress",
     tags: [
-      "MCP Orchestration",
-      "Agentic AI",
-      "Evidence-first",
-      "Hypothesis Critique",
-      "Python",
+      "Execution Orchestration",
+      "Deterministic Pipelines",
+      "Evidence Traceability",
+      "Adversarial Reasoning Control",
+      "Python / Modular Services",
     ],
-    impact: "Provenance-bound, fully traceable outputs",
+    impact:
+      "Provenance-bound artifacts • reproducible execution • isolated tool services",
     bullets: [
-      "Modular, evidence-first research system — decomposes research into literature mapping, contradiction analysis, hypothesis critique, and proposal drafting",
-      "Central orchestrator coordinates execution but performs no heavy reasoning",
-      "Deterministic MCP-compliant tool services handle ingestion, retrieval, clustering, extraction, and drafting",
-      "Selective multi-agent reasoning (Hypothesis Agent + Critic Agent) used only where adversarial critique improves epistemic quality",
-      "All outputs are provenance-bound, schema-validated, and evidence-linked — no ungrounded claims",
+      "Modular research execution platform — breaks research workflows into ingest, retrieval, contradiction analysis, and structured synthesis",
+      "Central orchestrator schedules and routes tasks; does not perform heavy reasoning itself — enforces deterministic sequencing and service isolation",
+      "Deterministic, schema-anchored services execute ingestion, retrieval, clustering, extraction, and drafting with reproducible interfaces",
+      "Selective multi-agent reasoning invoked only when adversarial critique improves outcome quality, minimizing unnecessary computation",
+      "All outputs are traceable, schema-validated, and evidence-linked — enabling deterministic audit trails and no ungrounded claims",
     ],
     github: "https://github.com/spice14/researcher-ai",
   },
@@ -129,18 +131,19 @@ const projects = [
     devStatus: "in-progress",
     tags: [
       "Contrastive Learning",
-      "PINNs",
-      "Multimodal",
-      "Physics ML",
-      "CLIP-style",
+      "Physics-Aware Representations",
+      "Multimodal Encoders",
+      "Regime Identification",
+      "Production Inference Layer",
+      "Python / ML Pipeline",
     ],
-    impact: "Regime identification via contrastive alignment",
+    impact:
+      "Regime classification via contrastive alignment • deterministic inference • informs execution logic rather than replaces solvers",
     bullets: [
-      "Reframes regime identification as a multimodal representation learning task — CLIP-inspired contrastive alignment",
-      "Aligns symbolic physics descriptions (equations, regimes, parameters) with observed physical behavior in shared latent space",
-      "Two symmetric encoders: Text Encoder for symbolic physics, Field Encoder for physical behavior",
-      "Trained jointly with a contrastive objective — pulls matching physics–data pairs together, pushes mismatches apart",
-      "Acts as a physics-aware perception layer — does not replace classical solvers, determines which physics to apply",
+      "Physics-aware inference layer for real-world systems — bridges symbolic physics and observed behavior to inform routing and execution decisions",
+      "Dual encoder architecture embeds symbolic physics descriptors and field data into a shared latent space for fast regime discrimination",
+      "Joint contrastive training optimizes alignment so the system reliably predicts which physical model applies under varying runtime conditions",
+      "Serves as a physics regime selector within broader pipelines — not a solver, but a deterministic trigger for downstream computation pathways",
     ],
     github: "https://github.com/spice14/PHYSCLIP",
   },
@@ -152,14 +155,22 @@ const projects = [
     logo: "https://cdn.simpleicons.org/hsbc/DB0011",
     logoHeight: 22,
     status: "Production",
-    tags: ["LLM", "SIP/PJSIP", "TLS/DTLS", "Drift Detection", "BFSI"],
-    impact: "$1.3M annualized savings · 1,600+ concurrent sessions",
+    tags: [
+      "LLM Infrastructure",
+      "Async Concurrency",
+      "Observability & MTTR Reduction",
+      "SIP/Voice Orchestration",
+      "Cost Optimization",
+    ],
+    impact:
+      "1,600+ concurrent sessions · ~$1.3M annualized savings · low-latency SLA",
     bullets: [
-      "Built a secure PJSIP-based media pipeline with TLS/DTLS transport for live speech processing in regulated BFSI workflows",
-      "Scaled distributed inference from 100 → 1,600+ concurrent sessions at ~500ms–1s latency",
-      "Reduced projected compute costs from ~$118K/month to ~$8K/month (~$1.3M annualized savings)",
-      "Built LLM monitoring framework using BLEU, ROUGE-L, METEOR, and MACD-based time-series anomaly detection",
-      "Reduced post-call documentation from 10–15 min to 2–3 min per interaction",
+      "Led 4-engineer team to build the enterprise SIP integration stack across Packer-automated GCE workloads and core signaling (SBC → STT → LLM inference)",
+      "Drove async concurrency architecture with asyncio + uvloop, eliminating GIL contention and scaling per-VM capacity from 20 → 140–160 calls",
+      "Sustained 1,600+ concurrent sessions with <2s E2E transcription delay and <5% packet loss under real-world load",
+      "Migrated infrastructure from n2-standard-32 → c2-standard-8, reducing compute from ~$118K/month → ~$8K/month (~$1.3M annualized)",
+      "Architected cross-stack observability with log correlation over GCP Logging APIs, reconstructing 250K+ log lines in <5s and cutting MTTR from ~1–2 hrs → ~5 min",
+      "Reduced post-call documentation latency from ~10–15 min → ~2–3 min per interaction",
     ],
     github: null,
   },
@@ -170,14 +181,21 @@ const projects = [
     logo: COFORGE_LOGO,
     logoHeight: 18,
     status: "Production",
-    tags: ["Azure", "LLM", "PlantUML", "Few-shot Prompting", "SDD Generation"],
-    impact: "2–3 days → ~2–3 hours documentation turnaround",
+    tags: [
+      "Azure Infrastructure",
+      "State Extraction",
+      "Dependency Mapping",
+      "PlantUML Diagram Generation",
+      "Validation & Drift Guardrails",
+    ],
+    impact:
+      "~2–3 days → ~2–3 hours documentation turnaround · automated infra state extraction",
     bullets: [
-      "Automatically generates Software Design Documents from a single Azure subscription ID",
-      "Reduced documentation turnaround from 2–3 days to ~2–3 hours across avg. 104 resource groups per deployment",
-      "Extracts service dependencies, network flows, and security configurations from live cloud state",
-      "Generated dynamic architecture diagrams using PlantUML via few-shot prompting",
-      "Introduced validation layers to reduce hallucination risk and ensure architectural correctness",
+      "Automated extraction of live Azure infrastructure state to generate Software Design Documents from subscription ID of deployed infra.",
+      "Extracts service dependencies, network flows, and security configurations directly from cloud state for deterministic architecture modeling.",
+      "Reduced documentation turnaround from ~2–3 days → ~2–3 hours across ~104 resource groups per deployment",
+      "Generated dynamic architecture diagrams with PlantUML driven by structured model outputs rather than free-form text",
+      "Introduced validation layers to curb hallucination risk and ensure architectural correctness and completeness",
     ],
     github: null,
   },
@@ -189,19 +207,20 @@ const projects = [
     logoHeight: 18,
     status: "Production",
     tags: [
-      "RAG",
-      "GPT-4o",
-      "Camelot",
-      "PDF Extraction",
-      "Contract Intelligence",
+      "Document Processing Pipeline",
+      "Structured Extraction",
+      "LLM-Assisted Normalization",
+      "PDF Table Parsing",
+      "Contract Intelligence Systems",
     ],
-    impact: "96% extraction accuracy",
+    impact:
+      "~96% extraction accuracy · automated contract normalization pipeline",
     bullets: [
-      "Processes unstructured airline contract PDFs — transforms complex multi-format agreements into structured, queryable data",
-      "Extraction pipeline using Camelot and Ghostscript — handles digitally readable PDFs and image-embedded tables",
-      "Leveraged GPT-4o with one-shot prompting to preserve contextual accuracy across varied contract formats",
-      "Achieved 96% extraction accuracy for downstream Q&A workflows",
-      "Significantly reduced manual contract review effort and accelerated retrieval for commercial teams",
+      "Structured extraction pipeline converting unstructured airline contract PDFs into normalized, queryable datasets",
+      "Multi-stage parsing using Camelot + Ghostscript to handle mixed digital and image-embedded tables across heterogeneous formats",
+      "LLM-assisted normalization layer (GPT-4o, controlled prompting) to preserve contextual integrity across variable contract structures",
+      "Achieved ~96% structured field extraction accuracy enabling reliable downstream query and retrieval workflows",
+      "Reduced manual contract review overhead and accelerated commercial data access through automated ingestion and indexing",
     ],
     github: null,
   },
@@ -379,7 +398,7 @@ function bulletIcon(text: string): string {
 
 export function Projects() {
   const isMobile = useIsMobile();
-  const [hovered, setHovered] = useState<number | null>(null);
+  const [openCard, setOpenCard] = useState<number | null>(0);
 
   return (
     <section
@@ -436,13 +455,13 @@ export function Projects() {
             margin: 0,
           }}
         >
-          Things I've built & shipped.
+          Systems, Realized.
         </motion.h2>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
         {projects.map((p, i) => {
-          const isHovered = hovered === i;
+          const isOpen = openCard === i;
           const statusColor =
             p.devStatus === "completed"
               ? "#4ade80"
@@ -469,20 +488,28 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: 0.04 * i, duration: 0.55 }}
-              onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(null)}
+              onClick={() => setOpenCard((prev) => (prev === i ? null : i))}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setOpenCard((prev) => (prev === i ? null : i));
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-expanded={isOpen}
               style={{
                 borderRadius: "12px",
-                border: isHovered
+                border: isOpen
                   ? "1px solid rgba(255,255,255,0.14)"
                   : "1px solid rgba(255,255,255,0.07)",
-                background: isHovered
+                background: isOpen
                   ? "linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.015) 100%)"
                   : "rgba(255,255,255,0.018)",
                 backdropFilter: "blur(6px)",
                 transition: "border-color 0.3s, background 0.3s",
                 overflow: "hidden",
-                cursor: "default",
+                cursor: "pointer",
               }}
             >
               <div
@@ -501,7 +528,7 @@ export function Projects() {
                     fontSize: "0.6rem",
                     letterSpacing: "0.15em",
                     paddingTop: "5px",
-                    color: isHovered
+                    color: isOpen
                       ? "rgba(255,255,255,0.55)"
                       : "rgba(255,255,255,0.22)",
                     transition: "color 0.3s",
@@ -531,7 +558,7 @@ export function Projects() {
                         lineHeight: 1.2,
                         letterSpacing: "-0.02em",
                         margin: 0,
-                        color: isHovered ? "#fafaf8" : "rgba(255,255,255,0.65)",
+                        color: isOpen ? "#fafaf8" : "rgba(255,255,255,0.65)",
                         transition: "color 0.3s",
                       }}
                     >
@@ -560,7 +587,7 @@ export function Projects() {
                       display: "flex",
                       alignItems: "center",
                       gap: "8px",
-                      marginBottom: isHovered ? "1rem" : "0",
+                      marginBottom: isOpen ? "1rem" : "0",
                       transition: "margin 0.3s",
                     }}
                   >
@@ -582,7 +609,7 @@ export function Projects() {
                   </div>
 
                   <AnimatePresence>
-                    {isHovered && (
+                    {isOpen && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
@@ -706,7 +733,7 @@ export function Projects() {
                       href={p.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      animate={{ opacity: isHovered ? 1 : 0 }}
+                      animate={{ opacity: isOpen ? 1 : 0 }}
                       transition={{ duration: 0.25 }}
                       style={{
                         display: "flex",
@@ -720,6 +747,7 @@ export function Projects() {
                         textDecoration: "none",
                         transition: "border-color 0.2s, color 0.2s",
                       }}
+                      onClick={(e) => e.stopPropagation()}
                       onMouseEnter={(e) => {
                         const el = e.currentTarget as HTMLElement;
                         el.style.borderColor = "#e8e0d0";
@@ -735,7 +763,7 @@ export function Projects() {
                     </motion.a>
                   ) : (
                     <motion.div
-                      animate={{ opacity: isHovered ? 0.5 : 0 }}
+                      animate={{ opacity: isOpen ? 0.5 : 0 }}
                       transition={{ duration: 0.25 }}
                       style={{
                         width: "34px",
