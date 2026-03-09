@@ -97,7 +97,7 @@ export function Contact() {
       id="contact"
       style={{
         padding: isMobile ? "4rem 4vw 3rem" : "10rem 6vw 8rem",
-        background: "rgba(255,255,255,0.015)",
+        background: "transparent",
         position: "relative",
       }}
     >
@@ -338,8 +338,8 @@ export function Contact() {
             intensity={5}
             style={{
               borderRadius: "8px",
-              border: "1px solid rgba(255,255,255,0.07)",
-              background: "rgba(255,255,255,0.02)",
+              border: "1px solid rgba(255,255,255,0.11)",
+              background: "rgba(255,255,255,0.025)",
               padding: isMobile ? "1.2rem" : "2.5rem",
             }}
           >

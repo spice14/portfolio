@@ -65,7 +65,7 @@ export function Hero() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        padding: isMobile ? "0 4vw" : "0 6vw",
+        padding: isMobile ? "0 5.5vw" : "0 8.5vw",
         background: "transparent",
         position: "relative",
         overflow: "hidden",
@@ -79,8 +79,8 @@ export function Hero() {
         style={{
           position: "absolute",
           top: isMobile ? 60 : 80,
-          left: isMobile ? "4vw" : "6vw",
-          right: isMobile ? "4vw" : "6vw",
+          left: isMobile ? "5.5vw" : "8.5vw",
+          right: isMobile ? "5.5vw" : "8.5vw",
           height: "1px",
           background: "rgba(255,255,255,0.08)",
           transformOrigin: "left",
@@ -96,7 +96,7 @@ export function Hero() {
         style={{
           position: "absolute",
           top: isMobile ? 36 : 56,
-          left: isMobile ? "4vw" : "6vw",
+          left: isMobile ? "5.5vw" : "8.5vw",
           fontFamily: '"DM Mono", monospace',
           fontSize: isMobile ? "0.55rem" : "0.65rem",
           letterSpacing: "0.18em",
@@ -116,7 +116,7 @@ export function Hero() {
         style={{
           position: "absolute",
           top: isMobile ? 36 : 56,
-          right: isMobile ? "4vw" : "6vw",
+          right: isMobile ? "5.5vw" : "8.5vw",
           fontFamily: '"DM Mono", monospace',
           fontSize: isMobile ? "0.55rem" : "0.65rem",
           letterSpacing: "0.18em",
@@ -189,8 +189,8 @@ export function Hero() {
                 fontFamily:
                   '"Editorial New", "Playfair Display", Georgia, serif',
                 fontSize: isMobile
-                  ? "clamp(3.5rem, 13vw, 11rem)"
-                  : "clamp(5rem, 13vw, 11rem)",
+                  ? "clamp(3.2rem, 11.8vw, 10rem)"
+                  : "clamp(4.5rem, 11.8vw, 10rem)",
                 fontWeight: 300,
                 lineHeight: 0.9,
                 letterSpacing: "-0.03em",
@@ -220,8 +220,8 @@ export function Hero() {
                 fontFamily:
                   '"Editorial New", "Playfair Display", Georgia, serif',
                 fontSize: isMobile
-                  ? "clamp(3.5rem, 13vw, 11rem)"
-                  : "clamp(5rem, 13vw, 11rem)",
+                  ? "clamp(3.2rem, 11.8vw, 10rem)"
+                  : "clamp(4.5rem, 11.8vw, 10rem)",
                 fontWeight: 800,
                 lineHeight: 1.1,
                 letterSpacing: "-0.04em",
@@ -307,7 +307,7 @@ export function Hero() {
             transition={{ delay: 1.1, duration: 0.7 }}
             style={{
               fontFamily: '"DM Sans", sans-serif',
-              fontSize: isMobile ? "0.95rem" : "1rem",
+              fontSize: isMobile ? "0.9rem" : "0.95rem",
               lineHeight: 1.7,
               color: "rgba(255,255,255,0.65)",
               maxWidth: isMobile ? "100%" : "420px",
@@ -483,8 +483,8 @@ export function Hero() {
           transition={{ delay: 0.4, duration: 1.1, ease: [0.76, 0, 0.24, 1] }}
           style={{
             position: "relative",
-            width: "90%",
-            margin: isMobile ? "0 auto" : "0 3vw 0 auto",
+            width: isMobile ? "84%" : "82%",
+            margin: isMobile ? "0 auto" : "0 2vw 0 auto",
           }}
         >
           <div

@@ -91,7 +91,7 @@ export function Skills() {
       id="skills"
       style={{
         padding: isMobile ? "4rem 4vw" : "10rem 6vw",
-        background: "rgba(255,255,255,0.012)",
+        background: "transparent",
         position: "relative",
       }}
     >
@@ -247,8 +247,8 @@ export function Skills() {
                 intensity={7}
                 style={{
                   borderRadius: "10px",
-                  border: "1px solid rgba(255,255,255,0.06)",
-                  background: "rgba(255,255,255,0.02)",
+                  border: "1px solid rgba(255,255,255,0.11)",
+                  background: "rgba(255,255,255,0.025)",
                   padding: "1.8rem 2rem",
                 }}
               >

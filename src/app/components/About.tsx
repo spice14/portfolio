@@ -220,8 +220,8 @@ export function About() {
                     gap: "1.2rem",
                     padding: "1.2rem 1.5rem",
                     borderRadius: "8px",
-                    border: "1px solid rgba(255,255,255,0.05)",
-                    background: "rgba(255,255,255,0.02)",
+                    border: "1px solid rgba(255,255,255,0.11)",
+                    background: "rgba(255,255,255,0.025)",
                   }}
                 >
                   <div
