@@ -399,6 +399,12 @@ function bulletIcon(text: string): string {
 export function Projects() {
   const isMobile = useIsMobile();
   const [openCard, setOpenCard] = useState<number | null>(0);
+  const orderedProjects = [...projects].sort((a, b) => {
+    const aIsAward = a.status === "Best Outgoing Project · 2022–23";
+    const bIsAward = b.status === "Best Outgoing Project · 2022–23";
+    if (aIsAward === bIsAward) return 0;
+    return aIsAward ? 1 : -1;
+  });
 
   return (
     <section
@@ -460,26 +466,36 @@ export function Projects() {
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-        {projects.map((p, i) => {
+        {orderedProjects.map((p, i) => {
           const isOpen = openCard === i;
-          const statusColor =
-            p.devStatus === "completed"
-              ? "#4ade80"
-              : p.devStatus === "in-progress"
-                ? "#facc15"
-                : "rgba(255,255,255,0.35)";
-          const statusBorder =
-            p.devStatus === "completed"
-              ? "rgba(74,222,128,0.35)"
-              : p.devStatus === "in-progress"
-                ? "rgba(250,204,21,0.35)"
-                : "rgba(255,255,255,0.12)";
-          const statusBg =
-            p.devStatus === "completed"
-              ? "rgba(74,222,128,0.06)"
-              : p.devStatus === "in-progress"
-                ? "rgba(250,204,21,0.06)"
-                : "transparent";
+          const isAwardStatus = p.status === "Best Outgoing Project · 2022–23";
+          const statusColor = isAwardStatus
+            ? "#c9a84c"
+            : p.status === "Production"
+              ? "#22d3ee"
+              : p.devStatus === "completed"
+                ? "#4ade80"
+                : p.devStatus === "in-progress"
+                  ? "#facc15"
+                  : "rgba(255,255,255,0.35)";
+          const statusBorder = isAwardStatus
+            ? "rgba(201,168,76,0.45)"
+            : p.status === "Production"
+              ? "rgba(34,211,238,0.4)"
+              : p.devStatus === "completed"
+                ? "rgba(74,222,128,0.35)"
+                : p.devStatus === "in-progress"
+                  ? "rgba(250,204,21,0.35)"
+                  : "rgba(255,255,255,0.12)";
+          const statusBg = isAwardStatus
+            ? "rgba(201,168,76,0.12)"
+            : p.status === "Production"
+              ? "rgba(34,211,238,0.1)"
+              : p.devStatus === "completed"
+                ? "rgba(74,222,128,0.06)"
+                : p.devStatus === "in-progress"
+                  ? "rgba(250,204,21,0.06)"
+                  : "transparent";
 
           return (
             <motion.div
@@ -571,6 +587,9 @@ export function Projects() {
                         letterSpacing: "0.12em",
                         borderRadius: "20px",
                         padding: "3px 9px",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "5px",
                         textTransform: "uppercase",
                         whiteSpace: "nowrap",
                         color: statusColor,
@@ -579,6 +598,11 @@ export function Projects() {
                       }}
                     >
                       {p.status}
+                      {isAwardStatus && (
+                        <span style={{ fontSize: "0.7rem", lineHeight: 1 }}>
+                          🏆
+                        </span>
+                      )}
                     </span>
                   </div>
 
