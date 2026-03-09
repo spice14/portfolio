@@ -32,7 +32,7 @@ const timeline = [
     logoH: 55,
   },
   {
-    year: "2025–2027",
+    year: "2025-Present",
     role: "Executive Diploma",
     company: "IIIT Bangalore",
     detail: "Dual specialisation - MLOps, GenAI",
