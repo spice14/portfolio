@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useRef, useCallback, useState } from "react";
 import { useIsMobile, useIsTouchDevice } from "../../hooks/useMediaQuery";
-import profilePicture from "../../assets/profilePicture.jpeg";
+import profilePicture from "../../assets/profilePicture.jpeg?url";
 
 const PROFILE_IMAGE = profilePicture;
 const CONTACT_EMAIL = "ashwingupta3012@gmail.com";

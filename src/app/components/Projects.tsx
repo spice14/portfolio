@@ -3,10 +3,10 @@ import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import { TiltCard } from "./TiltCard";
 import { useIsMobile } from "../../hooks/useMediaQuery";
-import coforgeLogoImg from "../../assets/coforgeLogo.jpeg";
-import gidaLogoImg from "../../assets/gidaLogo.jpeg";
-import hdfcLogoImg from "../../assets/HDFClogo.jpeg";
-import bmsceLogoImg from "../../assets/BMSlogo.jpeg";
+import coforgeLogoImg from "../../assets/coforgeLogo.jpeg?url";
+import gidaLogoImg from "../../assets/gidaLogo.jpeg?url";
+import hdfcLogoImg from "../../assets/HDFClogo.jpeg?url";
+import bmsceLogoImg from "../../assets/BMSlogo.jpeg?url";
 
 const FONT_SERIF = '"Playfair Display", Georgia, serif';
 const FONT_MONO = '"DM Mono", monospace';

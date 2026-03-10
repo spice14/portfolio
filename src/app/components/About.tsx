@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
 import { TiltCard } from "./TiltCard";
 import { useIsMobile } from "../../hooks/useMediaQuery";
-import coforgeLogoImg from "../../assets/coforgeLogo.jpeg";
-import gidaLogoImg from "../../assets/gidaLogo.jpeg";
-import bmsceLogoImg from "../../assets/BMSlogo.jpeg";
-import iiitbLogoImg from "../../assets/IIITlogo.jpeg";
+import coforgeLogoImg from "../../assets/coforgeLogo.jpeg?url";
+import gidaLogoImg from "../../assets/gidaLogo.jpeg?url";
+import bmsceLogoImg from "../../assets/BMSlogo.jpeg?url";
+import iiitbLogoImg from "../../assets/IIITlogo.jpeg?url";
 
 const FONT_SERIF = '"Playfair Display", Georgia, serif';
 const FONT_MONO = '"DM Mono", monospace';

@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import App from "../app/App";
+import "../styles/index.css";
+
+const canonical = "https://www.ashwingupta.dev/";
+---
+
+<BaseLayout
+  title="Ashwin Gupta | AI Systems & Infrastructure Engineer"
+  description="Portfolio of Ashwin Gupta: AI infrastructure, production systems, research projects, and contact links."
+  canonical={canonical}
+>
+  <App client:load />
+</BaseLayout>

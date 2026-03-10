@@ -18,7 +18,7 @@ type DustParticle = {
   delay: number;
 };
 
-const PARTICLE_COUNT = 350;
+const PARTICLE_COUNT = 400;
 
 export function ParticleField() {
   const particles = useMemo<DustParticle[]>(() => {
