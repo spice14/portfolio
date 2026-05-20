@@ -430,7 +430,6 @@ export function Research() {
         padding: isMobile ? "5rem 4vw" : "10rem 6vw",
         background: "transparent",
         position: "relative",
-        overflowAnchor: "none",
       }}
     >
       {/* Sticky heading block */}
@@ -445,10 +444,12 @@ export function Research() {
           paddingRight: isMobile ? "4vw" : "6vw",
           paddingTop: "0.85rem",
           paddingBottom: "0.85rem",
-          background:
-            "linear-gradient(to right, rgba(5,5,8,0.52) 0%, rgba(5,5,8,0.52) 45%, rgba(5,5,8,0) 88%)",
-          backdropFilter: "blur(6px)",
-          WebkitBackdropFilter: "blur(6px)",
+          background: isStuck
+            ? "linear-gradient(to right, rgba(5,5,8,0.52) 0%, rgba(5,5,8,0.52) 45%, rgba(5,5,8,0) 88%)"
+            : "transparent",
+          backdropFilter: isStuck ? "blur(6px)" : "none",
+          WebkitBackdropFilter: isStuck ? "blur(6px)" : "none",
+          transition: "background 0.3s ease",
           marginBottom: isMobile ? "3rem" : "5rem",
         }}
       >
@@ -483,7 +484,7 @@ export function Research() {
         </div>
 
         {/* Section heading */}
-        <div style={{ overflow: "hidden" }}>
+        <div style={{ overflow: "hidden", background: "transparent" }}>
           <motion.h2
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
